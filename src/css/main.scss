@@ -1,0 +1,1630 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
+
+
+
+
+
+*{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: text;
+    -webkit-tap-highlight-color: transparent;
+}
+
+$fontfamily: webfontregular, sans-serif;
+$green:#00747a;
+$prim:#707070;
+$pink:#FD466A  ;
+$yellow:#ffa150  ;
+$blck:#1c1b1a;
+$fsz:18px;
+
+
+
+//Files
+
+$colorDefault: #efeceb;
+$colorPSD: #001d26;
+$colorHTML: #c12808;
+$colorCSS: #64B5F6;
+$colorJS: #FFA726;
+$colorTS: #294E80;
+$colorBS: #563d7c;
+$colorPHP: #8892BF;
+$colorWP: #464646;
+$colorCP: #C92735;
+$colorMagento: #f46f25;
+$colorWC:#96588a;
+$colorLARA:#f55247;
+$colorAN:#b52e31;
+$colorIO:#67a7ff ;
+
+$colorWpack:#175d96;
+$colorNPM:#cc3534;
+$colorGIT:#000000;
+$colorXD:#2e001f;
+$colorSASS:#cd669a;
+$colorfireb:#ffc107;
+$colorJQ:#7acef4;
+
+$colorAI:#261300;
+html{
+    font-family: $fontfamily;
+    font-size: $fsz;
+    margin: 0;padding:0;
+
+    body{
+        margin: 0;padding:0;
+        font-family: $fontfamily;
+        font-size: $fsz;
+    }
+
+    a{
+        outline: 0;
+      text-decoration: none;
+    }
+
+    .warper{    position: relative;
+       
+        
+
+        header{
+
+
+
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+
+
+
+            nav{    position: relative; margin-bottom: 4.375rem;
+                ul{    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    li{  display: inline-block;
+                        
+                        margin: 0;
+                        padding: 0;margin-right: 2rem;
+                        list-style: none;
+                        &:last-child{
+                            margin: 0;
+                        }
+                        a{
+                          
+                            font-weight: 500;
+                            font-size: 1.25rem;
+                            line-height: 1.25rem;
+                            padding: calc(1.25rem / 2);
+                            margin-left: calc(-1.25rem / 2);
+                            transition: color .5s ease-in;
+                            color: #fff;font-family: $fontfamily;
+                       
+                          
+                            &:hover {
+                                color: $yellow;  transition: width 10s ease-in;
+                                &:before,&:after{
+                                    content: '';
+                                    //width: 18px;
+                                    height: 4px;
+                                    background: rgba(255,255,255,0.1);
+                                    display: inline-block;
+                                    top: -5px;
+                                        position: relative;
+                                        margin-right: 5px;
+                                        animation-name: beforewidth;
+                                            animation-duration: .3s;width: 18px;
+                                        
+                                }
+                            }
+
+                         
+                        }
+                    }
+                }
+            }
+
+            .bg-g{
+                position: absolute;
+                background:url(../imgs/space-pattern.png) $green;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+    
+                
+    
+            }
+        
+            hgroup{
+                &.heading{    position: relative;
+                    &.h-1{
+                   
+                            h1{
+                                font-weight: 700;
+                               font-size: 4rem;
+                               line-height: 1;
+                               margin: 0px;color: rgba(248, 248, 248, 0.8);
+                               strong{
+                                color: #f8f8f8 ;
+                               }
+                               
+                                 }
+                                 span {
+                                    color: $yellow;
+                                    font-size: 1.5rem;
+                                    margin-top: 1rem;
+                                    display: block;
+                                    font-weight: 600;
+                
+                                }
+
+                    }
+                }
+            }
+
+        }
+
+        #mainContent{
+           
+            
+
+
+            //layout
+
+            .main-layout {    padding-top: 10%;padding-left: 6vw;
+                padding-right: 6vw; 
+                position: relative;
+               h1{color: #fff ; font-weight: 600;
+                font-size: 3rem;
+                line-height: .923;
+                margin: 0px;
+                span {
+                    color: $yellow;
+                    
+                }
+            }
+           
+                p{color: $yellow;
+                    margin: 0px;    position: relative;
+                    .clipbox{
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 5px;
+                            left: -24px;
+                            width: 10px;
+                            height: 10px;
+                            border: 2px solid $yellow;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                aside{
+
+                    .logo{
+                        font-size: 1rem;
+                    font-weight: 700;
+                    line-height: 28px;
+                    margin: 0;    color: #fff;
+                    text-transform: uppercase;
+                    span{
+                        font-size: 0.9rem;
+                        margin-top: 8px;
+                        display: block;
+                        font-weight: 400;
+
+                    }
+                    }
+
+                    
+                    
+
+                }
+
+                
+            }
+
+            section{
+                position: relative;
+                padding: 20px 0px;   
+                position: relative;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                max-height: 100%;
+            }
+
+
+            .content,.technology{
+                background: #f8f8f8;    
+            
+                hgroup{    
+                    &.heading{    position: relative;
+                        &.h-2{
+                       
+                                h2{
+                                   font-size: 2rem;
+                                   line-height: 1; margin: 0px; font-weight: 300;
+                                  span {
+                                        color: $yellow;
+                    
+                                    }
+                                   
+                                     }
+                                     
+                                    p{color: #b1a496;
+                                        margin: 0px;    position: relative;
+                                        .clipbox{
+                                            &::before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 9px;
+                                                left: -24px;
+                                                width: 10px;
+                                                height: 10px;
+                                                border: 2px solid $yellow;
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+    
+                        }
+                    }
+                }
+
+                .boxcontainer{
+
+                    padding: 40px 15vw;position: relative;
+z-index: 2;
+
+                    .box{  
+                        //box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+                        margin: 0 auto;
+                        padding: 10px;
+                        margin-top: 30px;    padding-bottom: 3px; padding-left: 10vw;
+                        p{
+                            font-size: 1.2rem;
+                            font-family: SegoeUI;
+                            font-weight: 400;
+                       
+                        text-align: justify;
+                        position: relative;
+
+                        &:first-child{
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 12px;
+                                left: -24px;
+                                width: 10px;
+                                height: 10px;
+                                background: #ffa150;
+                                opacity: 1;
+                            }
+                        }
+                            
+                        }
+                        h3{
+                      font-size: 1.5rem;
+                      line-height: 4.5rem;
+                      span {
+                          color: $yellow;
+                      }
+                     
+                  }
+                  .description {
+                      display: inline-block;
+                      vertical-align: top;
+                      width: calc((100% / 1.5));
+                      
+                  }
+                  }
+
+                }
+               
+                &:before{
+                    height: 27px;
+                    background: #ffa150;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    content: '';
+                    animation-name: beforewidthYellow;
+                    animation-duration: .6s;  width: 80vw; z-index: 1;
+                }
+            }
+
+
+            .projects{
+                background: #f1f1f1;
+                height: 100%;
+                padding: 40px 0px;
+
+                hgroup{    margin-bottom: 40px;
+                    &.heading{    position: relative;
+                        &.h-2{
+                       
+                                h2{
+                                   font-size: 2rem;
+                                   line-height: 1; margin: 0px; font-weight: 300;
+                                  span {
+                                        color: $yellow;
+                    
+                                    }
+                                   
+                                     }
+                                     
+                                    p{color: #b1a496;
+                                        margin: 0px;    position: relative;
+                                        .clipbox{
+                                            &::before {
+                                                content: '';
+                                                position: absolute;
+                                                top: 9px;
+                                                left: -24px;
+                                                width: 10px;
+                                                height: 10px;
+                                                border: 2px solid $yellow;
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+    
+                        }
+                    }
+                }
+                .proj-box{
+                    border: 0;
+                    background: #fff;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    padding: 15px;
+                    margin-bottom: 20px;
+
+                    h4 {
+                        font-weight: 300;
+                        font-family: 'Segoe UI';
+                        margin: 0px;
+                        &:after{ content: "";
+                            display: block;
+                            margin-top: 8px;
+                            border-bottom: 1px solid #e2e2e2;
+                            clear: both;
+                        }
+                    }
+
+                    .techno{
+                        font-weight: 300;
+                        font-family: 'Segoe UI';
+                        font-size: 0.7rem;display: block;
+                        margin: 0px;
+                        
+                        &:before{ content: "";
+                            display: block;
+                            margin-bottom: 8px;
+                            border-top: 1px solid #e2e2e2;
+                            clear: both;padding:0px;
+                        }
+
+                    }
+
+                }
+
+
+                .interest {
+                    text-align: center;
+                    background: $colorDefault;
+                    margin: 5px 0;
+                    transition: all .5s ease-in;
+                    height: 137px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;    overflow: hidden;
+
+                    img{
+                        filter: grayscale(100%);
+                        max-width: 200px;
+                        
+                    }
+
+
+                   
+
+
+                    &:hover{
+
+                        background: darken($colorDefault, 5%);
+                        &.prp{
+                            background: $colorBS;
+                        }
+                        
+                        &.bleu{
+                            background: $colorCSS;
+                        }
+                        &.yell{
+                            background: $colorfireb;
+                        }
+                      
+                        &.grnl{
+                            background: #B8D30B ;
+                        }
+                         &.grn{
+                            background: $green;
+                        }
+                        img{
+                            transition: all .5s ease-in;
+                            filter: grayscale(0%);
+                        }
+                        
+                    }
+                }
+
+               
+            }
+
+
+            .technology{height: 100%;
+                &::before{
+                    display: none;width: 0vw;
+                }
+
+                .boxcontainer{
+
+                    .container{margin-top: 30px;
+                        .row{
+                            justify-content: center;
+    align-items: center;
+                        }
+                    }
+                    p{
+                        color: rgba(28,27,26,0.6);    text-align: justify;
+                    }
+
+                    .svg-container {
+                        margin: 20px 0px;
+                    }
+
+
+                    h3 {margin: 0px;
+                        font-size: 2rem;
+                        line-height: 1;
+                        font-weight: 300;font-family: SegoeUI;
+                        span {
+                            color: $yellow;
+                        }
+                    }
+
+                  
+                        
+                    .box-icon{
+                        padding: 40px 0px;
+                    }
+
+                        .icon-file-type{
+                            position: relative;
+                            display: flex;
+                            background-color: lighten($colorDefault, 20%);
+                            width: 77px;
+                            min-width: 77px;
+                            height: 55px;
+                            justify-content: center;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: 500;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            margin-right: 40px;
+                            border-left: 1px solid;
+                            border-right: 1px solid;
+                            border-bottom: 1px solid;
+                            border-bottom-right-radius: 6px;
+                            border-bottom-left-radius: 6px;
+                            color: darken($colorDefault, 25%);
+                            border-color: $colorDefault;
+                            transition: all .5s ease-in;margin:0 auto;
+
+
+                            
+                            &:before {transition: all .5s ease-in;
+                                content: '';
+                                height: 0;
+                                position: absolute;
+                                bottom: 100%;
+                                border-style: solid;
+                                border-width: 0 30px 30px 0;
+                                border-color: transparent;
+                                background-color: transparent !important;
+                                width: 49px;
+                                top: -30px;
+                                left: -1px;
+                                border-top-left-radius: 6px;
+                                border-bottom-color: $colorDefault;width: 102%;
+                              }
+
+                          
+
+                            .inner{ transition: all .5s ease-in;   width: 100%;
+                                &:before {transition: all .5s ease-in;
+                                    content: '';
+                                    height: 0;
+                                    position: absolute;
+                                    bottom: 100%;
+                                    border-style: solid;
+                                    border-width: 0 30px 30px 0;
+                                    border-color: transparent;
+                                    background-color: transparent !important;
+                                    width: 48px;
+                                    top: -29px;
+                                    left: 0px;
+                                    border-top-left-radius: 5px;
+                                    border-bottom-color: lighten($colorDefault, 20%);width: 100%;
+                                  }
+                                  &:after {transition: all .5s ease-in;
+                                    content: '';
+                                    width: 0;
+                                    height: 0;
+                                    position: absolute;
+                                    bottom: 100%;
+                                    right: -1px;
+                                    border-style: solid;
+                                    border-width: 15px;
+                                    border-color: transparent;
+                                    border-bottom-left-radius: 6px;
+                                    opacity: .8;
+                                    border-left-color: $colorDefault;
+                                    border-bottom-color: $colorDefault;
+                                  }
+                            }
+
+
+                            &:hover{
+                                transition: all .5s ease-in;
+                                &.html {
+                                    border-color: $colorHTML;
+                                    background-color: lighten($colorHTML, 30%);
+                                    color: darken($colorHTML, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorHTML;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorHTML, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorHTML;
+                                        border-bottom-color: $colorHTML;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorHTML;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+
+                                &.css {
+                                    border-color: $colorCSS;
+                                    background-color: lighten($colorCSS, 30%);
+                                    color: darken($colorCSS, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorCSS;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorCSS, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorCSS;
+                                        border-bottom-color: $colorCSS;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorCSS;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.ai {
+                                    border-color: $colorAI;
+                                    background-color: lighten($colorAI, 30%);
+                                    color: darken($colorAI, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorAI;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorAI, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorAI;
+                                        border-bottom-color: $colorAI;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorAI;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.js {
+                                    border-color: $colorJS;
+                                    background-color: lighten($colorJS, 30%);
+                                    color: darken($colorJS, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorJS;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorJS, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorJS;
+                                        border-bottom-color: $colorJS;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorJS;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.fireb {
+                                    border-color: $colorfireb;
+                                    background-color: lighten($colorfireb, 30%);
+                                    color: darken($colorfireb, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorfireb;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorfireb, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorfireb;
+                                        border-bottom-color: $colorfireb;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorfireb;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.ts {
+                                    border-color: $colorTS;
+                                    background-color: lighten($colorTS, 30%);
+                                    color: darken($colorTS, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorTS;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorTS, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorTS;
+                                        border-bottom-color: $colorTS;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorTS;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.bs {
+                                    border-color: $colorBS;
+                                    background-color: lighten($colorBS, 30%);
+                                    color: darken($colorBS, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorBS;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorBS, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorBS;
+                                        border-bottom-color: $colorBS;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorBS;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+                                &.php {
+                                    border-color: $colorPHP;
+                                    background-color: lighten($colorPHP, 30%);
+                                    color: darken($colorPHP, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorPHP;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorPHP, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorPHP;
+                                        border-bottom-color: $colorPHP;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorPHP;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+
+                                &.wp {
+                                    border-color: $colorWP;
+                                    background-color: lighten($colorWP, 30%);
+                                    color: darken($colorWP, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorWP;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorWP, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorWP;
+                                        border-bottom-color: $colorWP;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorWP;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.cp {
+                                    border-color: $colorCP;
+                                    background-color: lighten($colorCP, 30%);
+                                    color: darken($colorCP, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorCP;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorCP, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorCP;
+                                        border-bottom-color: $colorCP;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorCP;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.mg {
+                                    border-color: $colorMagento;
+                                    background-color: lighten($colorMagento, 30%);
+                                    color: darken($colorMagento, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorMagento;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorMagento, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorMagento;
+                                        border-bottom-color: $colorMagento;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorMagento;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.lara {
+                                    border-color: $colorLARA;
+                                    background-color: lighten($colorLARA, 30%);
+                                    color: darken($colorLARA, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorLARA;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorLARA, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorLARA;
+                                        border-bottom-color: $colorLARA;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorLARA;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.sass {
+                                    border-color: $colorSASS;
+                                    background-color: lighten($colorSASS, 30%);
+                                    color: darken($colorSASS, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorSASS;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorSASS, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorSASS;
+                                        border-bottom-color: $colorSASS;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorSASS;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.jq {
+                                    border-color: $colorJQ;
+                                    background-color: lighten($colorJQ, 30%);
+                                    color: darken($colorJQ, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorJQ;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorJQ, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorJQ;
+                                        border-bottom-color: $colorJQ;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorJQ;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.an {
+                                    border-color: $colorAN;
+                                    background-color: lighten($colorAN, 30%);
+                                    color: darken($colorAN, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorAN;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorAN, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorAN;
+                                        border-bottom-color: $colorAN;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorAN;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.io {
+                                    border-color: $colorIO;
+                                    background-color: lighten($colorIO, 30%);
+                                    color: darken($colorIO, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorIO;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorIO, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorIO;
+                                        border-bottom-color: $colorIO;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorIO;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+
+                                &.wc {
+                                    border-color: $colorWC;
+                                    background-color: lighten($colorWC, 30%);
+                                    color: darken($colorWC, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorWC;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorWC, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorWC;
+                                        border-bottom-color: $colorWC;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorWC;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.npm {
+                                    border-color: $colorNPM;
+                                    background-color: lighten($colorNPM, 30%);
+                                    color: darken($colorNPM, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorNPM;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorNPM, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorNPM;
+                                        border-bottom-color: $colorNPM;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorNPM;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                
+                                &.git {
+                                    border-color: $colorGIT;
+                                    background-color: lighten($colorGIT, 30%);
+                                    color: darken($colorGIT, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorGIT;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorGIT, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorGIT;
+                                        border-bottom-color: $colorGIT;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorGIT;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+
+                                &.psd {
+                                    border-color: $colorPSD;
+                                    background-color: lighten($colorPSD, 30%);
+                                    color: darken($colorPSD, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorPSD;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorPSD, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorPSD;
+                                        border-bottom-color: $colorPSD;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorPSD;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+                                &.xd {
+                                    border-color: $colorXD;
+                                    background-color: lighten($colorXD, 30%);
+                                    color: darken($colorXD, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorXD;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorXD, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorXD;
+                                        border-bottom-color: $colorXD;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorXD;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+
+                                &.wpack {
+                                    border-color: $colorWpack;
+                                    background-color: lighten($colorWpack, 30%);
+                                    color: darken($colorWpack, 20%);
+                                    &:before {
+                                    border-bottom-color: $colorWpack;
+                                    }
+                                    
+                                    .inner {
+                                    &:before {
+                                        border-bottom-color: lighten($colorWpack, 30%);
+                                    }
+                                    &:after {
+                                        border-left-color: $colorWpack;
+                                        border-bottom-color: $colorWpack;
+                                    }
+                                    }
+                                    p{
+                                        background: $colorWpack;
+                                        color:#f8f8f8;
+                                      
+                                    }
+                                   
+                                }
+
+
+                               
+
+                            }
+
+
+                            p{
+                                background: $colorDefault;
+                                color:$blck;
+                                text-align: center;
+                                transition: all .5s ease-in;
+                            }
+                           
+                             
+
+                              
+                             
+  
+                          }
+                           
+                          
+                        
+                          
+                      
+                          
+                     
+                      
+                    
+
+
+                }
+            }
+        }
+    }
+
+
+
+ 
+   
+}
+
+
+.skillbar{    text-align: center;
+     span {
+    height: 5px;
+    display: inline-block;
+    width: 20px;
+    background: #f8ac21;
+   margin-right: 5px;
+    animation-name: showfade;
+    animation-duration: .6s; 
+
+    &:last-child{
+        
+        margin: 0px
+    }
+
+
+  
+
+   
+}
+
+&.w4{
+    span{
+        &:nth-child(n+5){
+            background: #ccc;
+        }
+
+    }
+}
+&.w3{
+    span{
+        &:nth-child(n+4){
+            background: #ccc;
+        }
+
+    }
+}
+&.w2{
+    span{
+        &:nth-child(n+3){
+            background: #ccc;
+        }
+
+    }
+}
+&.w1{
+    span{
+        &:nth-child(n+2){
+            background: #ccc;
+
+    }
+}  }
+
+&.w0{
+    span{
+        &:nth-child(n+1){
+            background: #ccc;
+        }
+
+    }
+}
+}
+
+
+
+.orange-line {
+   
+    width: 100vw;
+    padding-bottom: calc(100% / 12 / 5);
+    background: #ffa150;
+    position: absolute;
+    z-index: 10000;    top: 0;
+}
+
+
+#grid-container {
+    position: absolute;   height: 100%;
+    left: 0;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;    z-index: 0;
+    .grid-columns {
+        position: absolute;   height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        white-space: nowrap; z-index: 0;
+        .column {
+            height: 100%;
+            position: relative;  z-index: 0;   display: inline-block;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background: rgba(255,255,255,0.1);
+            }
+        }
+    }
+
+    .gridDots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0; z-index: 0;
+    .dot {
+            position: absolute; z-index: 0;
+            width: 1.5px;
+            height: 1.5px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+        }
+    }
+
+    &.green{
+
+       
+        .grid-columns {
+            .column {
+                &::before {background: rgba( 0, 116, 122,0.08);}
+            }
+
+        }
+        .gridDots {
+            .dot {  background: rgba(0, 116, 122,0.8);}
+        }
+
+    }
+}
+
+
+footer{
+
+    .row {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    width: 100%;
+    background: #1c1b1a;
+    color: #fff;
+    position: relative;
+    padding: 40px 0px;
+
+    .copyright-info{
+        margin-top: 40px;
+        text-align: center;
+
+        color: #fff;
+        font-size: 0.8rem;
+
+    }
+     hgroup{
+        position: relative;
+        &.h-2{
+       
+                h2{
+                   font-size: 2rem;
+                   line-height: 1; margin: 0px; font-weight: 300;
+                  span {
+                        color: $yellow;
+    
+                    }
+                   
+                     }
+                     
+                    p{color: #b1a496;
+                        margin: 0px;    position: relative;
+                        .clipbox{
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 9px;
+                                left: -24px;
+                                width: 10px;
+                                height: 10px;
+                                border: 2px solid $yellow;
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+        }
+    }
+
+    h3 {
+        font-size: 3rem;
+        letter-spacing: 5px;
+        line-height: 1;   
+         text-align: center;
+        text-transform: uppercase;
+        margin: 0px;    font-weight: 300;    text-align: center;
+
+    }
+
+    h4 {
+        font-size: 1rem; margin: 0px;    font-weight: 300;    text-align: center; color: #b1a496;
+    }
+
+
+    ul{
+        margin: 0;padding:0;    text-align: center;
+        li{
+            margin: 0px;display: inline-block;
+            list-style: none;
+            a{
+                color: #fff;
+                font-size: 0.8rem;
+            }
+
+        }
+    }
+    &:before{
+        //content: '';
+        display: block;
+        background: url(../imgs/wave.png) 0 0;
+        height: 25px;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    form{
+
+       
+        .inputs{
+            label{
+                display: block;
+                font-size: 0.9rem;
+                margin-bottom:5px;
+
+            }
+            input{
+                display: block;
+                width: 100%;
+                height: 35px;
+                border: 0px;
+                border-radius: 5px;padding: 0 10px;
+                
+            }
+            textarea{
+                display: block;
+                width: 100%;
+               // height: 28px;
+                border: 0px; border-radius: 5px;padding: 0 10px;
+                
+            }
+            margin-bottom: 20px;
+        }
+        button{
+            background:transparent;
+            border: none;
+            position: relative;
+            color: #fff;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 200px;
+            height: 38px;
+            line-height: 38px;   
+
+            &:before {
+                content: '';
+                position: absolute;
+                top:2.5rem;
+                width: 100%;
+                height: 3px;
+                bottom: 0;
+                left: 0;
+                background-color: #ffa150;
+                opacity: 1;
+                transform-origin: 0 50%;
+    transform: scaleX(0);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+               
+            }
+
+        
+            &:after {
+                content: '';
+                position: absolute;
+                top: 2.5rem;
+                width: 100%;
+                height: 3px;
+                bottom: 0;
+                left: 0;
+                background-color: #ffa150;
+                opacity: 1;
+                transform-origin: 100% 50%;
+    transform: scaleX(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.25s;
+               
+            }
+
+            &:hover{
+                &:before{
+                    transform: scaleX(1);
+                    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.25s;
+                }
+               
+                &:after{
+                    transform: scaleX(0);
+                    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                }
+            }
+        }
+    }
+}
+
+
+.page-section-separator{
+    display: block;
+    position: relative;
+    width: 80vw;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $yellow;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    &:before,&:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        width: 5px;
+        height: 5px;
+        margin: -3px 0 0;
+        border-radius: 50%;
+        background-color: $yellow;
+       
+    }
+    &:before{
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+::selection {
+    color: #fff;
+    background: $yellow;
+    text-shadow: none;
+}
+
+.button-inactive {
+    width: 22px;
+    height: 22px;   border: 1px solid  $yellow;
+    display:block;
+    display: block;
+    border-radius: 50%;
+    position: relative;margin-top: 1px;
+    float: right;
+  
+        &:after {    content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: $yellow;
+            top: 43%; border-radius: 50%;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            text-align: 0;
+            margin: 0 auto;
+        }
+
+        animation: pulse 3s infinite;
+
+        &:hover{
+            box-shadow: 0 0px 8px $yellow;
+            border: 0px solid  $yellow;
+            background-color:$yellow;
+            &:after {   
+                background-color: #ffffff;
+              
+             
+
+              
+            }
+        }
+    
+}
+
+
+
+
+/* The animation  */
+@keyframes showfade {
+    0%   {opacity: 0;}
+    25%   {opacity: 0.25}
+    50%   {opacity: 0.5}
+    100%   {opacity: 1}
+}
+
+
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(255,161,80,0);
+        box-shadow: 0 0 0 0 rgba(255,161,80,0);
+        
+      }
+
+    20% {
+        -moz-box-shadow: 0 0 0 0 rgba(255,161,80,0.5);
+        box-shadow: 0 0 0 0 rgba(255,161,80,0.5);
+        
+      }
+    50% {
+        -moz-box-shadow: 0 0 0 10px rgba(255,161,80,0);
+        box-shadow: 0 0 0 10px rgba(255,161,80,0);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 0 rgba(255,161,80,0.5);
+        box-shadow: 0 0 0 0 rgba(255,161,80,0.5);
+        
+      }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(255,161,80,0);
+        box-shadow: 0 0 0 0 rgba(255,161,80,0);
+    }
+  }
+
+@keyframes beforewidthYellow {
+    0%   {width: 0px;}
+    25%   {width: 20vw}
+    50%   {width: 40vw}
+    70%   {width: 60vw;}
+    100%   {width: 80vw;}
+}
