@@ -48,10 +48,10 @@ module.exports = {
             from: './src/imgs',
             to: 'imgs',
           }]),
-          new CopyWebpackPlugin([{
-            from: './src/fonts',
-            to: 'fonts',
-          }]),
+        //   new CopyWebpackPlugin([{
+        //     from: './src/fonts',
+        //     to: 'fonts',
+        //   }]),
           new ImageminPlugin({ 
               test: /\.(jpe?g|png|gif)$/i
          })
