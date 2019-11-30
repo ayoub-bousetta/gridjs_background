@@ -1,6 +1,6 @@
 ### See it here
 
-[aubbusta.com](http://aubbusta.co) 
+[aubbusta.co](http://aubbusta.co) 
 
 #### Simple Shown Gridjs/Css (Installing)
 
